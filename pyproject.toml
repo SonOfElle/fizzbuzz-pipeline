@@ -1,0 +1,19 @@
+[project]
+name = "fizzbuzz-pipeline"
+version = "0.1.0"
+description = "FizzBuzz evaluation pipeline with gated CI quality checks."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra -q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
